@@ -1,0 +1,6 @@
+.fl{
+    float: left;
+}
+.clearfix::after{
+    clear: both;
+}

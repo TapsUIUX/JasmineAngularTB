@@ -1,0 +1,30 @@
+<div class="wrapper">
+
+  <div class='clearfix' >
+    <p>App Component</p>
+    <button id="inc" class='fl' (click)='inc()'>increment</button>
+    <button id="dec" class='fl'(click)='dec()'>decrement</button>  
+    <div class='fl'> Output : {{num}}</div>
+  </div>
+  <br>
+  <p>Collected the number emited when emit button is clicked : <span style="color:red;font-size:20px;">{{eventNum}}</span></p>
+  <p>we will test a dummy component with Input and Output</p>
+  
+  <div class="wrapper">
+    <app-dummy [num]='num' (num_e)='eventCollector($event)'></app-dummy>
+  </div>
+
+  <br>
+
+  <p>Event Emmited from the form : {{userName | camelCase}} / {{pw}}</p>
+  <div class='wrapper'>
+    <app-login-form (submit_e)='formEvent($event)'></app-login-form>
+  </div>
+
+  <p>We will create a component that will use a service. The component will fetch data useing HTTP service. We will be testing the service.</p>
+  <div class="wrapper">
+    <app-posts></app-posts>
+  </div>
+  
+
+</div>

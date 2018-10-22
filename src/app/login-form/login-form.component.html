@@ -1,0 +1,15 @@
+<div>
+  <p>Let us test a Form Now that uses Form Builder</p>
+
+<form [formGroup]='loginForm'>
+  <label for="user">User Name :</label><br>
+  <input type="text" name="" id="userName" formControlName='userName'><br>
+  <label for="pw">Password : </label><br>
+  <input type="text" name="" id="pw" formControlName='pw'><br><br>
+  <button id='formSubmit' (click)='onSubmit();'>Submit</button>
+</form>
+
+<p>Check 2 Way binding : FB should work</p>
+
+{{loginForm.value.userName}} / {{loginForm.value.pw}}
+</div>
